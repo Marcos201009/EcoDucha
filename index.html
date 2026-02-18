@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDucha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tooplate-living-parallax.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+<!--
+
+Tooplate 2150 Living Parallax
+
+https://www.tooplate.com/view/2150-living-parallax
+
+Free HTML CSS Template
+
+-->
+</head>
+<body>
+    <!-- UI Toggle Button - Always Visible -->
+    <button class="ui-toggle-btn" id="uiToggleBtn" aria-label="Toggle UI Visibility">
+        <svg viewBox="0 0 24 24" id="eyeIcon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <header class="ui-element">
+        <div class="logo">EcoDucha</div>
+        <nav id="mainNav">
+            <a onclick="openOverlay('about')">About</a>
+            <a onclick="openOverlay('testimonials')">Products</a>
+            <a onclick="openOverlay('contact')">Contact</a>
+            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="slider-wrapper">
+        <div class="slider-container" id="slider">
+           
+
+           
+
+            <!-- Slide 3 -->
+            <div class="slide" data-index="2">
+                <div class="parallax-layer background-layer">
+                    <img src="images/ocean-serenity.jpg" alt="Ocean">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>What EcoDucha is</h2>
+                    <p>A smart shower system designed to reduce water consumption by controlling flow and shower time, helping users save water effortlessly</p>
+                </div>
+            </div>
+
+            
+            <!-- Slide 5 -->
+            <div class="slide" data-index="4">
+                <div class="parallax-layer background-layer">
+                    <img src="images/spring-bloom.jpg" alt="Flowers">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>How it woks </h2>
+                    <p>EcoDucha usses sensors and an automatic flow-control mechanic lo limit excesive water use while maintaining a comfortable shower experience </p>
+                </div>
+            </div>
+
+            
+
+           
+
+
+            <!-- Slide 9 -->
+            <div class="slide" data-index="8">
+                <div class="parallax-layer background-layer">
+                    <img src="images/summit-glory.jpg" alt="Mountain Peak">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Why it matters</h2>
+                    <p>By encouraging responsible water use, EcoDucha helps communities reduce waste and supports sustainable development, especially in water-scarce regionsS</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-arrow prev ui-element">‹</div>
+            <div class="nav-arrow next ui-element">›</div>
+
+            <!-- Dots -->
+            <div class="dots-container ui-element">
+                
+                <span class="dot" data-slide="2"></span>
+              
+                <span class="dot" data-slide="4"></span>
+              
+                <span class="dot" data-slide="8"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Parallax Shapes -->
+    <div class="parallax-shape shape-1 ui-element"></div>
+    <div class="parallax-shape shape-2 ui-element"></div>
+
+    <!-- Play/Pause Button -->
+    <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container ui-element">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Duration Controls -->
+    <div class="duration-controls ui-element">
+        <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
+        <div class="duration-display" id="durationDisplay">5<span>s</span></div>
+        <button class="duration-btn" id="increaseDuration" aria-label="Increase Duration">+</button>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="overlay" id="aboutOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('about')">×</button>
+            <h2>About Us</h2>
+            <p>We are a team of five 15-year-old students from Secundaria at High Point International School working on an integrative project focused on water conservation and awareness.</p>
+
+
+            <p>Our project analyzes water usage habits by first recording baseline consumption and students’ perceived water use through short surveys. We then implement a chronometer system that automatically stops water flow after ten minutes, encouraging users to become more aware of their water consumption. Water-use duration is monitored over a set period to observe behavioral changes caused by this time restriction. Finally, post-intervention surveys are conducted to compare actual water use with initial perceptions and evaluate improvements in awareness and conservation behavior.
+
+Through this project, we aim to promote responsible water use while developing skills in research, collaboration, and problem-solving..</p>
+  
+           
+            <img src="images/about-mountain.jpg" alt="Mountain landscape" class="overlay-image">
+        </div>
+    </div>
+
+    <!-- Testimonials Overlay -->
+    <div class="overlay" id="testimonialsOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('testimonials')">×</button>
+            <h2>Product</h2>
+            
+            <div class="testimonial-card">
+                <p>"Ecoducha helps reduce water waste, lower utility bills, and encourage environmentally responsible habits without significantly changing the user’s routine.
+            </div>
+
+            <div class="testimonial-card">Ecoducha is an innovative and practical solution for homes, hotels, and gyms looking to improve water efficiency and sustainability.</p>
+                <p ></p>
+            </div>
+            <img src="images/mountain-dreams.jpg" alt="Mountain landscape" class="overlay-image">
+           
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div class="overlay" id="contactOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('contact')">×</button>
+            <h2>Contact Us</h2>
+            <p>Want to buy an EcoDucha?.</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your.email@example.com" required>
+                
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="What's this about?" required>
+                
+                <label>Message</label>
+                <textarea name="message" placeholder="Tell us more..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="contact-address">
+                <h3>Visit Us</h3>
+                <p>Blvd. Juan Navarrete 534, Nazareo Residencial,<br>
+                Hermosillo, Son 83224<br>
+                Mexico<br>
+                <a href="tel:+14155551234">+52 6622169140</a> | <a href="mailto:info@EcoDucha.com">info@EcoDucha.com</a></p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.394379340531!2d-111.00282302797744!3d29.088135089059296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce83c47d54995b%3A0xf25d7bd30e79ef3!2sHighPoint%20International%20School%20Hermosillo!5e0!3m2!1ses-419!2smx!4v1770237118000!5m2!1ses-419!2smx" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 12px; opacity: 0.9;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="overlay-map">
+                </iframe>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Overlay -->
+    <div class="overlay" id="privacyOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('privacy')">×</button>
+            <h2>Privacy Policy</h2>
+            <p>At Parallax Gallery, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website.</p>
+            
+            <p><strong>Information We Collect:</strong> We may collect personal information such as your name, email address, and any other details you provide when contacting us through our website forms. We also collect non-personal information such as browser type, IP address, and pages visited for analytics purposes.</p>
+            
+            <p><strong>How We Use Your Information:</strong> The information we collect is used to respond to your inquiries, improve our website experience, and send occasional updates about our gallery (only if you've opted in). We never sell, trade, or rent your personal information to third parties.</p>
+            
+            <p><strong>Data Security:</strong> We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. All form submissions are transmitted securely.</p>
+            
+            <p><strong>Cookies:</strong> Our website may use cookies to enhance user experience and track website analytics. You can disable cookies in your browser settings, though this may affect certain website functionalities.</p>
+            
+            <p><strong>Third-Party Services:</strong> We use Unsplash for image hosting, which may have its own privacy policies. We recommend reviewing their terms if you have concerns about image content.</p>
+            
+            <p><strong>Your Rights:</strong> You have the right to access, correct, or delete any personal information we hold about you. To exercise these rights, please contact us through our contact form.</p>
+            
+            <p><strong>Changes to This Policy:</strong> We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+            
+            <p>If you have any questions about this Privacy Policy, please don't hesitate to contact us.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui-element">
+        <p>Copyright © 2026 Living Parallax | <a href="#" onclick="openOverlay('privacy'); return false;">Privacy</a> | Design: <a href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+    </footer>
+<script src="tooplate-living-scripts.js"></script>
+</body>
+</html>
